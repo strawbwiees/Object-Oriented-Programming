@@ -11,4 +11,4 @@ for (int i = 0; i < size; i++)
     myArray[i] = int.Parse(Console.ReadLine());
 }
 
-Console.WriteLine("\nOriginal array:" + string.Join(", ", myArray));
+Console.WriteLine("\nArray:" + string.Join(", ", myArray));
