@@ -11,8 +11,14 @@ This repository contains my OOP coursework and practice programs. It documents m
 ```text
 Object-Oriented-Programming/
 │
+├── Arrays/
+│   └── Array programs
+│
 ├── Basics/
 │   └── Basic OOP exercises and activities
+│
+├── Loops/
+│   └── Loop programs
 │
 ├── Practice/
 │   └── OOP practice programs and exercises
