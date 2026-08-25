@@ -21,7 +21,7 @@ Object-Oriented-Programming/
 │   └── Loop programs
 │
 ├── Methods/
-│   └── 
+│   └── Methods programs
 │
 ├── Practice/
 │   └── OOP practice programs and exercises
