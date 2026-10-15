@@ -87,7 +87,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label5.Location = new Point(88, 272);
+            label5.Location = new Point(87, 257);
             label5.Name = "label5";
             label5.Size = new Size(16, 23);
             label5.TabIndex = 4;
@@ -139,7 +139,7 @@
             // 
             // closebtn
             // 
-            closebtn.BackColor = Color.Khaki;
+            closebtn.BackColor = Color.LightCoral;
             closebtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             closebtn.Location = new Point(492, 147);
             closebtn.Name = "closebtn";
@@ -170,7 +170,7 @@
             groupBox1.Controls.Add(subtractionbtn);
             groupBox1.Controls.Add(additionbtn);
             groupBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(53, 272);
+            groupBox1.Location = new Point(52, 257);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(683, 138);
             groupBox1.TabIndex = 13;
