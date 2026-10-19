@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace MachineProblemWInForm
 {
@@ -15,6 +16,11 @@ namespace MachineProblemWInForm
 
             // Remove Minimize, Maximize, and Close buttons
             this.ControlBox = false;
+
+            // Set initial status labels
+            label5.Text = "Status:";
+            label6.Text = "";
+            label6.ForeColor = Color.Black;
         }
 
         private void computebtn_Click(object sender, EventArgs e)
@@ -55,23 +61,44 @@ namespace MachineProblemWInForm
                 (midterm * 0.25) +
                 (finalGrade * 0.50);
 
-            // Display the result
+            // Display the semestral grade
             textBox4.Text = semestralGrade.ToString("0.00");
+
+            // Determine pass or fail
+            label5.Text = "Status:";
+
+            if (semestralGrade >= 75)
+            {
+                label6.Text = "PASSED";
+                label6.ForeColor = Color.Green;
+            }
+            else
+            {
+                label6.Text = "FAILED";
+                label6.ForeColor = Color.Red;
+            }
         }
 
         private void clearbtn_Click(object sender, EventArgs e)
         {
+            // Clear all grade textboxes
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            textBox4.Text = "";
+            textBox4.Clear();
 
+            // Reset status labels
+            label5.Text = "Status:";
+            label6.Text = "";
+            label6.ForeColor = Color.Black;
+
+            // Return focus to the first textbox
             textBox1.Focus();
         }
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            // Close the application even though ControlBox is disabled
+            // Close the application
             Application.Exit();
         }
 
@@ -112,6 +139,14 @@ namespace MachineProblemWInForm
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
         }
     }

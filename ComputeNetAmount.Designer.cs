@@ -41,6 +41,8 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            listBox1 = new ListBox();
+            label6 = new Label();
             calculatebtn = new Button();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             // 
             calculatebtn.BackColor = Color.BurlyWood;
             calculatebtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            calculatebtn.Location = new Point(95, 346);
+            calculatebtn.Location = new Point(69, 392);
             calculatebtn.Name = "calculatebtn";
             calculatebtn.Size = new Size(151, 53);
             calculatebtn.TabIndex = 5;
@@ -65,12 +67,13 @@
             label1.Size = new Size(167, 23);
             label1.TabIndex = 0;
             label1.Text = "Product Amount";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label2.Location = new Point(70, 116);
+            label2.Location = new Point(70, 123);
             label2.Name = "label2";
             label2.Size = new Size(93, 23);
             label2.TabIndex = 1;
@@ -80,7 +83,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(120, 177);
+            label3.Location = new Point(120, 184);
             label3.Name = "label3";
             label3.Size = new Size(100, 23);
             label3.TabIndex = 2;
@@ -90,7 +93,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(120, 223);
+            label4.Location = new Point(120, 238);
             label4.Name = "label4";
             label4.Size = new Size(177, 23);
             label4.TabIndex = 3;
@@ -100,7 +103,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label5.Location = new Point(70, 275);
+            label5.Location = new Point(70, 311);
             label5.Name = "label5";
             label5.Size = new Size(127, 23);
             label5.TabIndex = 4;
@@ -110,7 +113,7 @@
             // 
             clearbtn.BackColor = Color.BurlyWood;
             clearbtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            clearbtn.Location = new Point(244, 346);
+            clearbtn.Location = new Point(218, 392);
             clearbtn.Name = "clearbtn";
             clearbtn.Size = new Size(151, 53);
             clearbtn.TabIndex = 6;
@@ -122,7 +125,7 @@
             // 
             closebtn.BackColor = Color.LightCoral;
             closebtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            closebtn.Location = new Point(393, 346);
+            closebtn.Location = new Point(367, 392);
             closebtn.Name = "closebtn";
             closebtn.Size = new Size(151, 53);
             closebtn.TabIndex = 7;
@@ -142,7 +145,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox2.Location = new Point(272, 107);
+            textBox2.Location = new Point(272, 114);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(164, 32);
             textBox2.TabIndex = 9;
@@ -151,7 +154,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox3.Location = new Point(323, 174);
+            textBox3.Location = new Point(323, 181);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(164, 32);
             textBox3.TabIndex = 10;
@@ -160,7 +163,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox4.Location = new Point(323, 220);
+            textBox4.Location = new Point(323, 235);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(164, 32);
             textBox4.TabIndex = 11;
@@ -169,18 +172,40 @@
             // textBox5
             // 
             textBox5.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox5.Location = new Point(272, 272);
+            textBox5.Location = new Point(272, 308);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(164, 32);
             textBox5.TabIndex = 12;
             textBox5.TextChanged += textBox5_TextChanged;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(602, 95);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(309, 384);
+            listBox1.TabIndex = 13;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label6.Location = new Point(602, 54);
+            label6.Name = "label6";
+            label6.Size = new Size(83, 23);
+            label6.TabIndex = 14;
+            label6.Text = "RECEIPT";
+            label6.Click += label6_Click;
             // 
             // ComputeNetAmount
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(621, 450);
+            ClientSize = new Size(953, 520);
+            Controls.Add(label6);
+            Controls.Add(listBox1);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -196,6 +221,7 @@
             Controls.Add(label1);
             Name = "ComputeNetAmount";
             Text = "ComputeNetAmount";
+            Load += ComputeNetAmount_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,5 +241,7 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
+        private ListBox listBox1;
+        private Label label6;
     }
 }

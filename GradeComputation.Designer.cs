@@ -40,21 +40,27 @@
             computebtn = new Button();
             clearbtn = new Button();
             closebtn = new Button();
+            label5 = new Label();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
             groupBox1.Location = new Point(50, 49);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(422, 282);
+            groupBox1.Size = new Size(691, 282);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Grades Data Entry";
@@ -118,7 +124,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            label4.Location = new Point(50, 359);
+            label4.Location = new Point(415, 56);
             label4.Name = "label4";
             label4.Size = new Size(198, 27);
             label4.TabIndex = 6;
@@ -128,7 +134,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            textBox4.Location = new Point(265, 356);
+            textBox4.Location = new Point(415, 95);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(182, 36);
             textBox4.TabIndex = 6;
@@ -138,7 +144,7 @@
             // 
             computebtn.BackColor = Color.LightSteelBlue;
             computebtn.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            computebtn.Location = new Point(558, 88);
+            computebtn.Location = new Point(124, 378);
             computebtn.Name = "computebtn";
             computebtn.Size = new Size(157, 58);
             computebtn.TabIndex = 7;
@@ -150,7 +156,7 @@
             // 
             clearbtn.BackColor = Color.LightSteelBlue;
             clearbtn.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            clearbtn.Location = new Point(558, 152);
+            clearbtn.Location = new Point(315, 378);
             clearbtn.Name = "clearbtn";
             clearbtn.Size = new Size(157, 58);
             clearbtn.TabIndex = 8;
@@ -162,7 +168,7 @@
             // 
             closebtn.BackColor = Color.LightCoral;
             closebtn.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            closebtn.Location = new Point(558, 216);
+            closebtn.Location = new Point(506, 378);
             closebtn.Name = "closebtn";
             closebtn.Size = new Size(157, 58);
             closebtn.TabIndex = 9;
@@ -170,17 +176,37 @@
             closebtn.UseVisualStyleBackColor = false;
             closebtn.Click += closebtn_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            label5.Location = new Point(415, 150);
+            label5.Name = "label5";
+            label5.Size = new Size(83, 27);
+            label5.TabIndex = 7;
+            label5.Text = "Status:";
+            label5.Click += label5_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            label6.Location = new Point(424, 187);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 27);
+            label6.TabIndex = 8;
+            label6.Text = "PASSED";
+            label6.Click += label6_Click;
+            // 
             // GradeComputation
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 486);
             Controls.Add(closebtn);
             Controls.Add(clearbtn);
             Controls.Add(computebtn);
-            Controls.Add(textBox4);
-            Controls.Add(label4);
             Controls.Add(groupBox1);
             Name = "GradeComputation";
             Text = "GradeComputation";
@@ -188,7 +214,6 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -205,5 +230,7 @@
         private Button computebtn;
         private Button clearbtn;
         private Button closebtn;
+        private Label label6;
+        private Label label5;
     }
 }

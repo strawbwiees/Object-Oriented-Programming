@@ -9,7 +9,22 @@ namespace MachineProblemWInForm
         public Form1()
         {
             InitializeComponent();
+
+            // Make the result textbox read-only
             resulttxt.ReadOnly = true;
+        }
+
+        // Add a calculation to the history list
+        private void AddToHistory(
+            double num1,
+            double num2,
+            string operation,
+            double result)
+        {
+            string entry = $"{num1:0.##} {operation} {num2:0.##} = {result:0.##}";
+
+            // Display the newest calculation at the top
+            historyListBox.Items.Insert(0, entry);
         }
 
         // Common method for mathematical operations
@@ -57,7 +72,8 @@ namespace MachineProblemWInForm
                 case "MOD":
                     if (num2 == 0)
                     {
-                        MessageBox.Show("Cannot get the remainder when dividing by zero.");
+                        MessageBox.Show(
+                            "Cannot get the remainder when dividing by zero.");
                         return;
                     }
 
@@ -79,7 +95,11 @@ namespace MachineProblemWInForm
                     return;
             }
 
-            resulttxt.Text = result.ToString();
+            // Display the result
+            resulttxt.Text = result.ToString("0.##");
+
+            // Save the successful calculation to history
+            AddToHistory(num1, num2, operation, result);
         }
 
         // Addition
@@ -118,14 +138,21 @@ namespace MachineProblemWInForm
             Calculate("\\");
         }
 
-        // Clear all textboxes
+        // Clear the input and result textboxes only
         private void clearbtn_Click(object sender, EventArgs e)
         {
             argument1txt.Clear();
             argument2txt.Clear();
             resulttxt.Clear();
 
+            // Keep the calculation history
             argument1txt.Focus();
+        }
+
+        // Clear the entire calculation history
+        private void clearHistorybtn_Click(object sender, EventArgs e)
+        {
+            historyListBox.Items.Clear();
         }
 
         // Close the application
@@ -134,7 +161,7 @@ namespace MachineProblemWInForm
             this.Close();
         }
 
-        // Unused label and GroupBox events
+        // Label and GroupBox events
         private void label1_Click(object sender, EventArgs e)
         {
         }
@@ -153,17 +180,18 @@ namespace MachineProblemWInForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void historyListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
