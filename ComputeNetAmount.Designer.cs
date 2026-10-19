@@ -181,9 +181,9 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(602, 95);
+            listBox1.Location = new Point(578, 95);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(309, 384);
+            listBox1.Size = new Size(333, 384);
             listBox1.TabIndex = 13;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -191,7 +191,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label6.Location = new Point(602, 54);
+            label6.Location = new Point(578, 54);
             label6.Name = "label6";
             label6.Size = new Size(83, 23);
             label6.TabIndex = 14;

@@ -46,6 +46,7 @@
             label3 = new Label();
             clearbtn = new Button();
             exitbtn = new Button();
+            circlePanel = new Panel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -240,12 +241,22 @@
             exitbtn.UseVisualStyleBackColor = false;
             exitbtn.Click += exitbtn_Click;
             // 
+            // circlePanel
+            // 
+            circlePanel.BorderStyle = BorderStyle.FixedSingle;
+            circlePanel.Location = new Point(781, 48);
+            circlePanel.Name = "circlePanel";
+            circlePanel.Size = new Size(295, 351);
+            circlePanel.TabIndex = 4;
+            circlePanel.Paint += circlePanel_Paint;
+            // 
             // UsageOfCaretSymbol
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LavenderBlush;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1105, 450);
+            Controls.Add(circlePanel);
             Controls.Add(exitbtn);
             Controls.Add(clearbtn);
             Controls.Add(groupBox2);
@@ -280,5 +291,6 @@
         private TextBox areatxt;
         private TextBox radiustxt;
         public Button circumferencebtn;
+        private Panel circlePanel;
     }
 }
