@@ -10,11 +10,9 @@ namespace MachineProblemWInForm
         {
             InitializeComponent();
 
-            // Make the result textbox read-only
             resulttxt.ReadOnly = true;
         }
 
-        // Add a calculation to the history list
         private void AddToHistory(
             double num1,
             double num2,
@@ -23,16 +21,15 @@ namespace MachineProblemWInForm
         {
             string entry = $"{num1:0.##} {operation} {num2:0.##} = {result:0.##}";
 
-            // Display the newest calculation at the top
+            // display latest
             historyListBox.Items.Insert(0, entry);
         }
 
-        // Common method for mathematical operations
         private void Calculate(string operation)
         {
             double num1, num2, result;
 
-            // Validate inputs
+            // check
             if (!double.TryParse(argument1txt.Text, out num1) ||
                 !double.TryParse(argument2txt.Text, out num2))
             {
@@ -95,38 +92,33 @@ namespace MachineProblemWInForm
                     return;
             }
 
-            // Display the result
+            // display
             resulttxt.Text = result.ToString("0.##");
 
-            // Save the successful calculation to history
+            // save to history
             AddToHistory(num1, num2, operation, result);
         }
-
-        // Addition
+            
         private void additionbtn_Click(object sender, EventArgs e)
         {
             Calculate("+");
         }
 
-        // Subtraction
         private void subtractionbtn_Click(object sender, EventArgs e)
         {
             Calculate("-");
         }
 
-        // Multiplication
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
             Calculate("*");
         }
 
-        // Division
         private void divisionbtn_Click(object sender, EventArgs e)
         {
             Calculate("/");
         }
 
-        // Modulo (remainder)
         private void modulobtn_Click(object sender, EventArgs e)
         {
             Calculate("MOD");
@@ -138,14 +130,12 @@ namespace MachineProblemWInForm
             Calculate("\\");
         }
 
-        // Clear the input and result textboxes only
         private void clearbtn_Click(object sender, EventArgs e)
         {
             argument1txt.Clear();
             argument2txt.Clear();
             resulttxt.Clear();
 
-            // Keep the calculation history
             argument1txt.Focus();
         }
 
@@ -155,13 +145,11 @@ namespace MachineProblemWInForm
             historyListBox.Items.Clear();
         }
 
-        // Close the application
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        // Label and GroupBox events
         private void label1_Click(object sender, EventArgs e)
         {
         }
@@ -192,6 +180,11 @@ namespace MachineProblemWInForm
 
         private void historyListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

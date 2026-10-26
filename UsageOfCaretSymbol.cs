@@ -16,22 +16,17 @@ namespace MachineProblemWInForm
         public UsageOfCaretSymbol()
         {
             InitializeComponent();
-
-            // Computed values cannot be edited manually
             exponentresulttxt.ReadOnly = true;
             areatxt.ReadOnly = true;
             circumferencetxt.ReadOnly = true;
             diametertxt.ReadOnly = true;
 
-            // Set up the visualization panel
             circlePanel.BackColor = Color.White;
             circlePanel.BorderStyle = BorderStyle.FixedSingle;
-
-            // Draw the circle when the panel needs repainting
             circlePanel.Paint += circlePanel_Paint;
         }
 
-        // EXPONENT: Base ^ Power
+        // exponent
         private void equalbtn_Click(object sender, EventArgs e)
         {
             double baseNumber;
@@ -54,7 +49,7 @@ namespace MachineProblemWInForm
             exponentresulttxt.Text = result.ToString("0.00");
         }
 
-        // AREA BUTTON
+        //area
         private void areabtn_Click(object sender, EventArgs e)
         {
             if (!CalculateCircle())
@@ -67,7 +62,7 @@ namespace MachineProblemWInForm
             circlePanel.Invalidate();
         }
 
-        // CIRCUMFERENCE BUTTON
+        //circum
         private void circumferencebtn_Click(object sender, EventArgs e)
         {
             if (!CalculateCircle())
@@ -80,7 +75,7 @@ namespace MachineProblemWInForm
             circlePanel.Invalidate();
         }
 
-        // DIAMETER BUTTON
+        //diam
         private void diameter_Click(object sender, EventArgs e)
         {
             if (!CalculateCircle())
@@ -93,7 +88,6 @@ namespace MachineProblemWInForm
             circlePanel.Invalidate();
         }
 
-        // Validate radius and prepare the circle
         private bool CalculateCircle()
         {
             double radius;
@@ -130,7 +124,7 @@ namespace MachineProblemWInForm
             return true;
         }
 
-        // DRAW THE CIRCLE
+        // drawing
         private void circlePanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -174,7 +168,6 @@ namespace MachineProblemWInForm
                 return;
             }
 
-            // Reserve space for labels
             float availableWidth = panelWidth - 50;
             float availableHeight = panelHeight - 65;
 
@@ -295,13 +288,10 @@ namespace MachineProblemWInForm
             basetxt.Focus();
         }
 
-        // EXIT APPLICATION
         private void exitbtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        // Existing Designer event handlers
         private void groupBox1_Enter(object sender, EventArgs e)
         {
         }

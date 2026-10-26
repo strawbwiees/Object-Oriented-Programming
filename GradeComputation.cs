@@ -11,10 +11,9 @@ namespace MachineProblemWInForm
         {
             InitializeComponent();
 
-            // Disable the Semestral Grade textbox
+            // pra di ma edit
             textBox4.Enabled = false;
 
-            // Remove Minimize, Maximize, and Close buttons
             this.ControlBox = false;
 
             // Set initial status labels
@@ -41,7 +40,6 @@ namespace MachineProblemWInForm
                 return;
             }
 
-            // Check if grades are within the valid range
             if (prelim < 0 || prelim > 100 ||
                 midterm < 0 || midterm > 100 ||
                 finalGrade < 0 || finalGrade > 100)
@@ -55,16 +53,12 @@ namespace MachineProblemWInForm
                 return;
             }
 
-            // Compute the semestral grade
             semestralGrade =
                 (prelim * 0.25) +
                 (midterm * 0.25) +
                 (finalGrade * 0.50);
-
-            // Display the semestral grade
             textBox4.Text = semestralGrade.ToString("0.00");
 
-            // Determine pass or fail
             label5.Text = "Status:";
 
             if (semestralGrade >= 75)
@@ -81,18 +75,15 @@ namespace MachineProblemWInForm
 
         private void clearbtn_Click(object sender, EventArgs e)
         {
-            // Clear all grade textboxes
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
 
-            // Reset status labels
             label5.Text = "Status:";
             label6.Text = "";
             label6.ForeColor = Color.Black;
 
-            // Return focus to the first textbox
             textBox1.Focus();
         }
 

@@ -12,7 +12,6 @@ namespace MachineProblemWInForm
         {
             InitializeComponent();
 
-            // Make computed values read-only
             textBox3.ReadOnly = true;
             textBox4.ReadOnly = true;
             textBox5.ReadOnly = true;
@@ -30,7 +29,6 @@ namespace MachineProblemWInForm
             double productAmount;
             int quantity;
 
-            // Validate input
             if (!double.TryParse(textBox1.Text, out productAmount) ||
                 !int.TryParse(textBox2.Text, out quantity))
             {
@@ -43,7 +41,7 @@ namespace MachineProblemWInForm
                 return;
             }
 
-            // Check for invalid values
+            //invalid
             if (productAmount < 0 || quantity <= 0)
             {
                 MessageBox.Show(
@@ -55,7 +53,7 @@ namespace MachineProblemWInForm
                 return;
             }
 
-            // Compute amounts
+
             double subTotal = productAmount * quantity;
             double discountAmount = subTotal * DISCOUNT_RATE;
             double netAmount = subTotal - discountAmount;
@@ -75,7 +73,7 @@ namespace MachineProblemWInForm
             );
         }
 
-        // Format the receipt in the ListBox
+        // format
         private void GenerateReceipt(
             double productAmount,
             int quantity,
@@ -130,7 +128,6 @@ namespace MachineProblemWInForm
             listBox1.TopIndex = 0;
         }
 
-        // Clear all fields and receipt
         private void clearbtn_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
@@ -144,7 +141,6 @@ namespace MachineProblemWInForm
             textBox1.Focus();
         }
 
-        // Close form
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();

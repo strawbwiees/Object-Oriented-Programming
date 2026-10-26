@@ -57,7 +57,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label1.Location = new Point(61, 93);
+            label1.Location = new Point(54, 60);
             label1.Name = "label1";
             label1.Size = new Size(140, 23);
             label1.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label2.Location = new Point(61, 138);
+            label2.Location = new Point(54, 105);
             label2.Name = "label2";
             label2.Size = new Size(140, 23);
             label2.TabIndex = 1;
@@ -79,7 +79,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label3.Location = new Point(61, 189);
+            label3.Location = new Point(54, 156);
             label3.Name = "label3";
             label3.Size = new Size(67, 23);
             label3.TabIndex = 2;
@@ -90,7 +90,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label5.Location = new Point(87, 257);
+            label5.Location = new Point(80, 224);
             label5.Name = "label5";
             label5.Size = new Size(16, 23);
             label5.TabIndex = 4;
@@ -101,7 +101,7 @@
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox1.Location = new Point(231, 91);
+            textBox1.Location = new Point(224, 58);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(162, 32);
             textBox1.TabIndex = 5;
@@ -112,7 +112,7 @@
             textBox2.BackColor = Color.White;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox2.Location = new Point(231, 136);
+            textBox2.Location = new Point(224, 103);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(162, 32);
             textBox2.TabIndex = 6;
@@ -123,7 +123,7 @@
             textBox3.BackColor = Color.White;
             textBox3.BorderStyle = BorderStyle.FixedSingle;
             textBox3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            textBox3.Location = new Point(231, 187);
+            textBox3.Location = new Point(224, 154);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(162, 32);
             textBox3.TabIndex = 7;
@@ -132,7 +132,7 @@
             // 
             clearbtn.BackColor = Color.Khaki;
             clearbtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            clearbtn.Location = new Point(52, 494);
+            clearbtn.Location = new Point(45, 461);
             clearbtn.Name = "clearbtn";
             clearbtn.Size = new Size(144, 60);
             clearbtn.TabIndex = 10;
@@ -144,7 +144,7 @@
             // 
             closebtn.BackColor = Color.LightCoral;
             closebtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            closebtn.Location = new Point(211, 494);
+            closebtn.Location = new Point(204, 461);
             closebtn.Name = "closebtn";
             closebtn.Size = new Size(144, 60);
             closebtn.TabIndex = 11;
@@ -173,7 +173,7 @@
             groupBox1.Controls.Add(subtractionbtn);
             groupBox1.Controls.Add(additionbtn);
             groupBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(52, 257);
+            groupBox1.Location = new Point(45, 224);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(366, 220);
             groupBox1.TabIndex = 13;
@@ -243,21 +243,21 @@
             // 
             // argument1txt
             // 
-            argument1txt.Location = new Point(231, 93);
+            argument1txt.Location = new Point(224, 60);
             argument1txt.Name = "argument1txt";
             argument1txt.Size = new Size(162, 27);
             argument1txt.TabIndex = 14;
             // 
             // argument2txt
             // 
-            argument2txt.Location = new Point(231, 138);
+            argument2txt.Location = new Point(224, 105);
             argument2txt.Name = "argument2txt";
             argument2txt.Size = new Size(162, 27);
             argument2txt.TabIndex = 15;
             // 
             // resulttxt
             // 
-            resulttxt.Location = new Point(231, 189);
+            resulttxt.Location = new Point(224, 156);
             resulttxt.Name = "resulttxt";
             resulttxt.Size = new Size(162, 27);
             resulttxt.TabIndex = 16;
@@ -269,7 +269,7 @@
             historyListBox.FormattingEnabled = true;
             historyListBox.HorizontalScrollbar = true;
             historyListBox.IntegralHeight = false;
-            historyListBox.Location = new Point(464, 138);
+            historyListBox.Location = new Point(457, 105);
             historyListBox.Name = "historyListBox";
             historyListBox.Size = new Size(301, 339);
             historyListBox.TabIndex = 17;
@@ -279,7 +279,7 @@
             // 
             clearHistorybtn.BackColor = Color.Khaki;
             clearHistorybtn.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            clearHistorybtn.Location = new Point(572, 494);
+            clearHistorybtn.Location = new Point(565, 461);
             clearHistorybtn.Name = "clearHistorybtn";
             clearHistorybtn.Size = new Size(193, 57);
             clearHistorybtn.TabIndex = 18;
@@ -291,18 +291,19 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label4.Location = new Point(464, 91);
+            label4.Location = new Point(457, 58);
             label4.Name = "label4";
             label4.Size = new Size(234, 23);
             label4.TabIndex = 19;
             label4.Text = "CALCULATION HISTORY";
+            label4.Click += label4_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LemonChiffon;
-            ClientSize = new Size(800, 606);
+            ClientSize = new Size(800, 571);
             Controls.Add(label4);
             Controls.Add(clearHistorybtn);
             Controls.Add(historyListBox);
